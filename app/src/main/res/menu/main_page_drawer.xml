@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_invitefriend"
+            android:icon="@drawable/add_group"
+            android:title="Invite Friend" />
+        <item
+            android:id="@+id/nav_blacklist"
+            android:icon="@drawable/block_user"
+            android:title="Block List" />
+        <item
+            android:id="@+id/nav_mood"
+            android:icon="@drawable/mood"
+            android:title="Mood" />
+    </group>
+
+    <item android:title="Other Option">
+        <menu>
+            <item
+                android:id="@+id/nav_theme"
+                android:icon="@drawable/theme"
+                android:title="Theme" />
+            <item
+                android:id="@+id/nav_privacy"
+                android:icon="@drawable/privacy"
+                android:title="Privacy" />
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/setting"
+                android:title="Setting" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
