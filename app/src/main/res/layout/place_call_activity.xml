@@ -62,16 +62,20 @@ tools:context="com.example.rafi715.rimeapplication.Calling.PlaceCallActivity">
         android:textStyle="bold"/>
 </LinearLayout>
 
-<RelativeLayout android:layout_width="fill_parent"
+<LinearLayout android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:layout_marginTop="20dp"
+    android:layout_below="@+id/numberInputLayout"
     android:layout_centerHorizontal="true"
-    android:id="@+id/relativeLayout">
+    android:id="@+id/buttonsLayout">
 
     <Button
         android:id="@+id/callButton"
         android:text="Audio Call"
         android:textSize="@dimen/button_text_size"
+        android:layout_weight="1"
         android:textColor="@color/bgForeGround"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,27 +83,21 @@ tools:context="com.example.rafi715.rimeapplication.Calling.PlaceCallActivity">
         android:background="@color/bgAudioColor"
         android:minHeight="56dp"
         android:minWidth="132dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/buttonVideoCall" />
 
-    <Button
-        android:id="@+id/stopButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/callButton"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/sinch_purple"
-        android:textAllCaps="true"
-        android:text="Stop service" android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/buttonCallLog"
         android:text="Call Logs"
         android:textSize="@dimen/button_text_size"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        android:layout_weight="1"
         android:textColor="@color/bgForeGround"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,7 +116,11 @@ tools:context="com.example.rafi715.rimeapplication.Calling.PlaceCallActivity">
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@color/bgVideoColor"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
         android:textSize="@dimen/button_text_size"
+        android:layout_weight="1"
         android:minHeight="56dp"
         android:minWidth="132dp"
         android:text="Video Call"
@@ -126,6 +128,17 @@ tools:context="com.example.rafi715.rimeapplication.Calling.PlaceCallActivity">
         android:layout_alignTop="@+id/callButton"
         android:layout_toStartOf="@+id/stopButton" />
 
-</RelativeLayout>
+</LinearLayout>
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonsLayout"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/sinch_purple"
+        android:textAllCaps="true"
+        android:text="Stop service" android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
