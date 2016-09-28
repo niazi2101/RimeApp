@@ -1,7 +1,5 @@
 package com.example.rafi715.rimeapplication;
 
-import android.app.FragmentManager;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -27,6 +25,8 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.rafi715.rimeapplication.Calling.FragmentContact;
+import com.example.rafi715.rimeapplication.Calling.PlaceCallActivity;
 import com.example.rafi715.rimeapplication.Tabs.SlidingTabLayout;
 
 import it.neokree.materialtabs.MaterialTab;
@@ -163,6 +163,12 @@ public class MainPage extends AppCompatActivity
     public void onTabUnselected(MaterialTab tab) {
 
     }
+
+    public void onPlaceCallClick(View view) {
+        Intent i = new Intent(getApplicationContext(), PlaceCallActivity.class);
+        startActivity(i);
+    }
+
     private class MyPagerAdapter extends FragmentPagerAdapter {
 
         int icon[]={R.drawable.phone, R.drawable.message, R.drawable.contact, R.drawable.group};

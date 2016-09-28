@@ -28,7 +28,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/colorLabel"
             android:textSize="35dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
         <ImageView
             android:id="@+id/profilePicture"
@@ -51,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="20dp"
+        android:weightSum="5"
         android:layout_below="@+id/registerPicture"
         android:orientation="vertical">
 
@@ -63,17 +65,21 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/rounded_edittext"
             android:gravity="center"
+            android:layout_weight="1"
             android:hint="USER NUMBER"
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textColorHint="@color/colorPrimaryDark"
-            android:textSize="25dp" />
+            android:textSize="25dp">
+            <requestFocus />
+        </EditText>
 
         <EditText
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_weight="1"
             android:layout_below="@+id/profilePicture"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -91,6 +97,7 @@
             android:id="@+id/loginSubmit"
             android:layout_width="175dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"

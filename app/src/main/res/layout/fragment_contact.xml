@@ -11,4 +11,22 @@
         android:layout_gravity="center_horizontal"
         android:text="Contact"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place Call"
+            android:id="@+id/buttonPlaceCall"
+            android:textSize="@dimen/button_text_size"
+            android:layout_gravity="center_horizontal"
+            android:background="#a1db4b"
+            android:onClick="onPlaceCallClick"/>
+    </LinearLayout>
+
 </LinearLayout>
